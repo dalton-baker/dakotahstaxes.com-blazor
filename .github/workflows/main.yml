@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     
     env:
-      DAY_OF_WEEK: Mon
+      DAY_OF_WEEK: Mon/
     
     steps:
     - uses: actions/checkout@v2
@@ -17,7 +17,7 @@ jobs:
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@4.0.0
       with:
-        local-dir: $env.DAY_OF_WEEK
+        local-dir: $env.DAY_OF_WEEK/
         server: 66.96.162.135
         username: ${{ secrets.DEPLOY_USERNAME }}
         password: ${{ secrets.DEPLOY_PASSWORD }}
