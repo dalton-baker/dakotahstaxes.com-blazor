@@ -11,27 +11,6 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     
-    - name: Setup .NET
-      uses: actions/setup-dotnet@v1
-      with:
-        dotnet-version: 5.0.x
-        
-    - name: Restore dependencies
-      run: dotnet restore
-      
-    - name: Build
-      run: dotnet build --no-restore
-      
-    - name: Test
-      run: dotnet test --no-build --verbosity normal
-      
-    - name: Build Release
-      run: dotnet publish -c Release -r linux-x64
-    
-    - name: 📂 Sync files
-      uses: SamKirkland/FTP-Deploy-Action@4.0.0
-      with:
-        local-dir: "$GITHUB_WORKSPACE/Dakotahstaxes.Com/bin/Release/net5.0/publish/wwwroot/"
-        server: 66.96.162.135
-        username: ${{ secrets.DEPLOY_USERNAME }}
-        password: ${{ secrets.DEPLOY_PASSWORD }}
+    - name: Print Info
+      run: echo "$GITHUB_WORKSPACE/Dakotahstaxes.Com/bin/Release/net5.0/publish/wwwroot/"
+
