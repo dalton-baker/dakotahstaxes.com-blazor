@@ -1,37 +1,83 @@
-﻿<div class="top-row pl-4 navbar navbar-dark">
-    <a class="navbar-brand" href="">Dakotahstaxes.Com</a>
-    <button class="navbar-toggler" @onclick="ToggleNavMenu">
-        <span class="navbar-toggler-icon"></span>
-    </button>
+﻿@inject NavigationManager NavigationManager
+
+<MudThemeProvider Theme="currentTheme" />
+
+<div class="title mud-theme-primary">
+    Dakotah's Bookkeeping & Taxes
+    <MudTooltip Text="Toggle Dark Mode" Style="float: right">
+        <MudIconButton Icon="@Icons.Material.Filled.Brightness4"
+                       OnClick="@((e) => DarkMode())"
+                       Color="Color.Inherit"></MudIconButton>
+    </MudTooltip>
 </div>
 
-<div class="@NavMenuCssClass" @onclick="ToggleNavMenu">
-    <ul class="nav flex-row" style="align-items: center; justify-content: center;">
-        <li class="nav-item px-3">
-            <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
-                <span class="oi oi-home" aria-hidden="true"></span> Home
-            </NavLink>
-        </li>
-        <li class="nav-item px-3">
-            <NavLink class="nav-link" href="counter">
-                <span class="oi oi-plus" aria-hidden="true"></span> Counter
-            </NavLink>
-        </li>
-        <li class="nav-item px-3">
-            <NavLink class="nav-link" href="fetchdata">
-                <span class="oi oi-list-rich" aria-hidden="true"></span> Fetch data
-            </NavLink>
-        </li>
-    </ul>
+<div>
+    <MudTabs Elevation="0" Centered="true" Color="@Color.Primary">
+        <MudTabPanel Icon="@Icons.Material.Filled.Home" Text="Home" OnClick="@(() => NavigationManager.NavigateTo(""))" />
+        <MudTabPanel Icon="@Icons.Material.Filled.Schedule" Text="Scheduling" OnClick="@(() => NavigationManager.NavigateTo(""))" />
+        <MudTabPanel Icon="@Icons.Material.Filled.Info" Text="Tax Info" OnClick="@(() => NavigationManager.NavigateTo(""))" />
+        <MudTabPanel Icon="@Icons.Material.Filled.Construction" Text="Tax Tools" OnClick="@(() => NavigationManager.NavigateTo(""))" />
+        <MudTabPanel Icon="@Icons.Material.Filled.Web" Text="Tax News" OnClick="@(() => NavigationManager.NavigateTo(""))" />
+
+        <MudTabPanel Text="Counter" OnClick="@(() => NavigationManager.NavigateTo("counter"))" />
+        <MudTabPanel Text="Fetch data" OnClick="@(() => NavigationManager.NavigateTo("fetchdata"))" />
+    </MudTabs>
 </div>
 
-@code {
-    private bool collapseNavMenu = true;
 
-    private string NavMenuCssClass => collapseNavMenu ? "collapse" : null;
+@code{
 
-    private void ToggleNavMenu()
+    protected override void OnInitialized()
     {
-        collapseNavMenu = !collapseNavMenu;
+        currentTheme = defaultTheme;
     }
+
+    void DarkMode()
+    {
+        if (currentTheme == defaultTheme)
+        {
+            currentTheme = darkTheme;
+        }
+        else
+        {
+            currentTheme = defaultTheme;
+        }
+    }
+
+    MudTheme currentTheme = new MudTheme();
+    MudTheme defaultTheme = new MudTheme()
+    {
+        Palette = new Palette()
+        {
+            Black = "#272c34"
+        }
+    };
+
+    MudTheme darkTheme = new MudTheme()
+    {
+        Palette = new Palette()
+        {
+            Black = "#27272f",
+            Background = "#32333d",
+            BackgroundGrey = "#27272f",
+            Surface = "#373740",
+            DrawerBackground = "#27272f",
+            DrawerText = "rgba(255,255,255, 0.50)",
+            DrawerIcon = "rgba(255,255,255, 0.50)",
+            AppbarBackground = "#27272f",
+            AppbarText = "rgba(255,255,255, 0.70)",
+            TextPrimary = "rgba(255,255,255, 0.70)",
+            TextSecondary = "rgba(255,255,255, 0.50)",
+            ActionDefault = "#adadb1",
+            ActionDisabled = "rgba(255,255,255, 0.26)",
+            ActionDisabledBackground = "rgba(255,255,255, 0.12)",
+            Divider = "rgba(255,255,255, 0.12)",
+            DividerLight = "rgba(255,255,255, 0.06)",
+            TableLines = "rgba(255,255,255, 0.12)",
+            LinesDefault = "rgba(255,255,255, 0.12)",
+            LinesInputs = "rgba(255,255,255, 0.3)",
+            TextDisabled = "rgba(255,255,255, 0.2)",
+            Primary = "#000000"
+        }
+    };
 }
