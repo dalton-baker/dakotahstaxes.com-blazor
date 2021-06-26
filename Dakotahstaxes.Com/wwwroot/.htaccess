@@ -49,11 +49,16 @@
     RewriteCond %{HTTP:Accept-encoding} gzip
     RewriteCond %{REQUEST_FILENAME}\.gz -s
     RewriteRule ^(.*)\.dat $1\.dat\.gz [QSA]
+
+    RewriteCond %{HTTP:Accept-encoding} gzip
+    RewriteCond %{REQUEST_FILENAME}\.gz -s
+    RewriteRule ^(.*)\.png $1\.png\.gz [QSA]
     
     RewriteRule \.css\.gz$ - [T=text/css,E=no-gzip:1]
     RewriteRule \.json\.gz$ - [T=text/json,E=no-gzip:1]
     RewriteRule \.html\.gz$ - [T=text/html,E=no-gzip:1]
     RewriteRule \.ico\.gz$ - [T=image/ico,E=no-gzip:1]
+    RewriteRule \.png\.gz$ - [T=image/ico,E=no-gzip:1]
     RewriteRule \.wasm\.gz$ - [T=application/wasm,E=no-gzip:1]
     RewriteRule \.dll\.gz$ - [T=application/octet-stream,E=no-gzip:1]
     RewriteRule \.blat\.gz$ - [T=application/octet-stream,E=no-gzip:1]

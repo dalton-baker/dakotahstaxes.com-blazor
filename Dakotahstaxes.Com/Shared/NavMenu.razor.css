@@ -26,6 +26,14 @@
     height: min-content;
 }
 
+.title-sm {
+    font-size: 2em;
+}
+
+.title-lg {
+    font-size: 3em;
+}
+
 @media (max-width: 640.98px) {
     .title-sm {
         display: block;
