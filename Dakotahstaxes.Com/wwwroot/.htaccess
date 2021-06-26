@@ -5,8 +5,10 @@
     RewriteBase /
 
     # You must add all possible urls in your application here
-    RewriteRule ^counter /index.html [L]
-    RewriteRule ^fetchdata /index.html [L]
+    RewriteRule ^scheduling /index.html [L]
+    RewriteRule ^taxinfo /index.html [L]
+    RewriteRule ^taxtools /index.html [L]
+    RewriteRule ^taxnews /index.html [L]
     
     AddEncoding gzip .gz
     
