@@ -1,0 +1,29 @@
+﻿.main-app-bar {
+    width: 100vw;
+    height: auto;
+    position: fixed;
+    bottom: 0%;
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+}
+
+#contact-us-table {
+    height: fit-content;
+}
+
+    #contact-us-table th {
+        text-align: left;
+        font-size: 1.2rem;
+    }
+
+    #contact-us-table td {
+        padding-top: 2px;
+        font-size: 1rem;
+        text-align: right;
+    }
+
+    #contact-us-table td:first-child {
+        padding-right: 10px;
+        text-align: left !important;
+    }

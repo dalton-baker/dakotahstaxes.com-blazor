@@ -1,6 +1,47 @@
+.main-app-bar {
+    width: 100vw;
+    height: auto;
+    position: sticky;
+    top: 0;
+}
+
+.title-app-bar {
+    display: flex;
+    flex-direction: row;
+    padding-left: 16px;
+    padding-right: 16px;
+    align-items: center;
+}
+
 .title {
     font-size: 3em;
     padding: 2px;
     font-family: 'Times New Roman', Times, serif;
     text-align: center;
+}
+
+.theme-button {
+    align-content: center;
+    display: flex;
+    height: min-content;
+}
+
+@media (max-width: 640.98px) {
+    .title-sm {
+        display: block;
+    }
+
+    .title-lg {
+        display: none;
+    }
+}
+
+@media (min-width: 641px) {
+    .title-sm {
+        display: none;
+    }
+
+    .title-lg {
+        display: block;
+    }
 }
