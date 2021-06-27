@@ -24,6 +24,7 @@
             <MudTabPanel Icon="@Icons.Material.Filled.Info" Text="Tax Info" OnClick="@(() => NavigationManager.NavigateTo("taxinfo"))" />
             <MudTabPanel Icon="@Icons.Material.Filled.Construction" Text="Tax Tools" OnClick="@(() => NavigationManager.NavigateTo("taxtools"))" />
             <MudTabPanel Icon="@Icons.Material.Filled.Web" Text="Tax News" OnClick="@(() => NavigationManager.NavigateTo("taxnews"))" />
+            <MudTabPanel Text="Try Other Style" OnClick="@(() => OnChangeStyle.InvokeAsync())" />
         </MudTabs>
     </div>
 </div>
