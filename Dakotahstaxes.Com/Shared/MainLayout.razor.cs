@@ -1,12 +1,12 @@
-﻿using Microsoft.AspNetCore.Components;
-using MudBlazor;
+﻿using MudBlazor;
 
 namespace Dakotahstaxes.Com.Shared
 {
-    public partial class NavMenu
+    public partial class MainLayout
     {
-        [Parameter] 
-        public EventCallback<bool> OnChangeStyle { get; set; }
+        bool _useNavBarComp = false;
+
+        bool open;
 
         string _themeButoonToolTip = "Dark Mode";
         MudTheme _currentTheme = new();
@@ -31,6 +31,7 @@ namespace Dakotahstaxes.Com.Shared
                 DrawerBackground = "#27272f",
                 DrawerText = "rgba(255,255,255, 0.50)",
                 DrawerIcon = "rgba(255,255,255, 0.50)",
+                
                 AppbarBackground = "#27272f",
                 AppbarText = "rgba(255,255,255, 0.70)",
                 TextPrimary = "rgba(255,255,255, 0.70)",
@@ -43,8 +44,7 @@ namespace Dakotahstaxes.Com.Shared
                 TableLines = "rgba(255,255,255, 0.12)",
                 LinesDefault = "rgba(255,255,255, 0.12)",
                 LinesInputs = "rgba(255,255,255, 0.3)",
-                TextDisabled = "rgba(255,255,255, 0.2)",
-                Primary = "#27272f"
+                TextDisabled = "rgba(255,255,255, 0.2)"
             }
         };
 

@@ -8,6 +8,33 @@
     flex: 1;
 }
 
+#contact-us-table {
+    height: fit-content;
+}
+
+    #contact-us-table th {
+        text-align: center;
+        font-size: 1.2rem;
+    }
+
+    #contact-us-table td {
+        padding-top: 2px;
+        font-size: 0.9rem;
+        text-align: right;
+    }
+
+        #contact-us-table td:first-child {
+            padding-right: 10px;
+            text-align: left !important;
+        }
+
+.title {
+    font-size: 3em;
+    padding: 2px;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+}
+
 .top-row {
     background-color: #f7f7f7;
     border-bottom: 1px solid #d6d5d5;
@@ -55,5 +82,33 @@
     .main > div {
         padding-left: 2rem !important;
         padding-right: 1.5rem !important;
+    }
+}
+
+.title-sm {
+    font-size: 2em;
+}
+
+.title-lg {
+    font-size: 3em;
+}
+
+@media (max-width: 699.98px) {
+    .title-sm {
+        display: block;
+    }
+
+    .title-lg {
+        display: none;
+    }
+}
+
+@media (min-width: 700px) {
+    .title-sm {
+        display: none;
+    }
+
+    .title-lg {
+        display: block;
     }
 }

@@ -1,8 +1,27 @@
 ﻿@page "/"
 
-<div id="main-grid">
-    <div><h3>Home</h3></div>
-    <div><img src="/assets/cert-agent.jpg" width="300" /></div>
-</div>
-
+<MudGrid>
+    <MudItem xs="12" sm="6">
+        <MudCard>
+            <MudCardContent>
+                <MudText>We do Federal, State, and Local Taxes</MudText>
+                <MudText Typo="Typo.body2">We charge a flat fee of $116</MudText>
+            </MudCardContent>
+            <MudCardActions>
+                <MudButton Variant="Variant.Filled" Color="Color.Info" Link="tel:7246387495">Call Us</MudButton>
+            </MudCardActions>
+        </MudCard>
+    </MudItem>
+    <MudItem xs="12" sm="6">
+        <MudCard>
+            <MudCardContent>
+                <MudText>Discounts for Students and Minors</MudText>
+                <MudText Typo="Typo.body2">We charge a flat $35 for anyone under 18 and Students</MudText>
+            </MudCardContent>
+            <MudCardActions>
+                <MudButton Variant="Variant.Filled" Color="Color.Info" Link="tel:7246387495">Call Us</MudButton>
+            </MudCardActions>
+        </MudCard>
+    </MudItem>
+</MudGrid>
 
