@@ -2,76 +2,59 @@
 
 <MudThemeProvider Theme="_currentTheme" />
 
-@if (_useNavBarComp)
-{
-    <div class="page">
-        <NavMenu OnChangeStyle="@(() => _useNavBarComp = !_useNavBarComp)" />
+<div class="page">
+    <MudLayout>
+        <MudAppBar Elevation="1">
+            <MudIconButton Icon="@Icons.Material.Filled.Menu" Color="Color.Inherit" Edge="Edge.Start" OnClick="@(() => open = !open)" />
+            <MudSpacer />
+            <div class="title title-lg">Dakotah's Bookkeeping & Taxes</div>
+            <div class="title title-sm">Dakotah's Taxes</div>
+            <MudSpacer />
+            <MudTooltip Text="@_themeButoonToolTip">
+                <MudIconButton Icon="@Icons.Material.Filled.Brightness4"
+                               OnClick="@((e) => ChangeTheme())"
+                               Color="Color.Inherit"></MudIconButton>
+            </MudTooltip>
+        </MudAppBar>
+        <MudDrawer @bind-Open="@open" Elevation="1">
+            <MudDrawerHeader>
+                <img src="/assets/logo.jpg" width="196" />
+            </MudDrawerHeader>
+            <MudNavMenu>
+                <MudNavLink Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.Home" Href="">Home</MudNavLink>
+                <MudNavLink Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.AttachMoney" Href="fees">Fees</MudNavLink>
+                <MudNavLink Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.Schedule" Href="scheduling">Scheduling</MudNavLink>
+                <MudNavLink Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.Info" Href="taxinfo">Tax Info</MudNavLink>
+                <MudNavLink Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.Construction" Href="taxtools">Tax Tools</MudNavLink>
+                <MudNavLink Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.Web" Href="taxnews">Tax News</MudNavLink>
+            </MudNavMenu>
+            <MudSpacer />
 
-        <div class="main">
-            <div class="content px-4">
-                @Body
+            <div style="padding: 5px">
+                <table id="contact-us-table">
+                    <tr>
+                        <th colspan="2">CONTACT US</th>
+                    </tr>
+                    <tr>
+                        <td>PHONE:</td>
+                        <td>(724) 638-7495</td>
+                    </tr>
+                    <tr>
+                        <td>FAX:</td>
+                        <td>(724) 835-8524</td>
+                    </tr>
+                    <tr>
+                        <td>EMAIL:</td>
+                        <td>taxwizard8@gmail.com</td>
+                    </tr>
+                </table>
             </div>
-        </div>
 
-        <Footer />
-    </div>
-}
-else
-{
-    <div class="page">
-        <MudLayout>
-            <MudAppBar Elevation="1">
-                <MudIconButton Icon="@Icons.Material.Filled.Menu" Color="Color.Inherit" Edge="Edge.Start" OnClick="@(() => open = !open)" />
-                <MudSpacer />
-                <div class="title title-lg">Dakotah's Bookkeeping & Taxes</div>
-                <div class="title title-sm">Dakotah's Taxes</div>
-                <MudSpacer />
-                <MudTooltip Text="@_themeButoonToolTip">
-                    <MudIconButton Icon="@Icons.Material.Filled.Brightness4"
-                                   OnClick="@((e) => ChangeTheme())"
-                                   Color="Color.Inherit"></MudIconButton>
-                </MudTooltip>
-            </MudAppBar>
-            <MudDrawer @bind-Open="@open" Elevation="1">
-                <MudDrawerHeader>
-                    <img src="/assets/cert-agent.jpg" width="196" />
-                </MudDrawerHeader>
-                <MudNavMenu>
-                    <MudNavLink Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.Home" Href="">Home</MudNavLink>
-                    <MudNavLink Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.Schedule" Href="scheduling">Scheduling</MudNavLink>
-                    <MudNavLink Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.Info" Href="taxinfo">Tax Info</MudNavLink>
-                    <MudNavLink Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.Construction" Href="taxtools">Tax Tools</MudNavLink>
-                    <MudNavLink Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.Web" Href="taxnews">Tax News</MudNavLink>
-                    <MudNavLink Match="NavLinkMatch.All" OnClick="@(() => _useNavBarComp = !_useNavBarComp)">Try Other Style</MudNavLink>
-                </MudNavMenu>
-                <MudSpacer />
-
-                <div style="padding: 5px">
-                    <table id="contact-us-table">
-                        <tr>
-                            <th colspan="2">CONTACT US</th>
-                        </tr>
-                        <tr>
-                            <td>PHONE:</td>
-                            <td>(724) 638-7495</td>
-                        </tr>
-                        <tr>
-                            <td>FAX:</td>
-                            <td>(724) 835-8524</td>
-                        </tr>
-                        <tr>
-                            <td>EMAIL:</td>
-                            <td>taxwizard8@gmail.com</td>
-                        </tr>
-                    </table>
-                </div>
-
-            </MudDrawer>
-            <MudMainContent>
-                <MudContainer Class="mt-2 ml-2 mr-2" Style="width: auto; max-width: none;">
-                    @Body
-                </MudContainer>
-            </MudMainContent>
-        </MudLayout>
-    </div>
-}
+        </MudDrawer>
+        <MudMainContent>
+            <MudContainer Class="mt-2 ml-2 mr-2" Style="width: auto; max-width: none;">
+                @Body
+            </MudContainer>
+        </MudMainContent>
+    </MudLayout>
+</div>
