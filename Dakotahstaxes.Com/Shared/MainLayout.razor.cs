@@ -4,9 +4,7 @@ namespace Dakotahstaxes.Com.Shared
 {
     public partial class MainLayout
     {
-        bool _useNavBarComp = false;
-
-        bool open;
+        bool open = true;
 
         string _themeButoonToolTip = "Dark Mode";
         MudTheme _currentTheme = new();

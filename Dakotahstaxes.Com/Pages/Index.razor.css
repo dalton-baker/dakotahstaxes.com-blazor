@@ -7,3 +7,8 @@
 
     #main-grid div {
     }
+
+.image-sizes{
+    max-width: 80%;
+    height: 135px;
+}
