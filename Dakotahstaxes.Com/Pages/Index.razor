@@ -1,27 +1,140 @@
 ﻿@page "/"
 
 <MudGrid>
-    <MudItem xs="12">
-        <MudPaper Class="d-flex flex-column align-center justify-center py-8" Style="padding: 10px">
+    <MudItem lg="8" md="8" sm="12" xs="12">
+        <MudPaper Class="d-flex flex-column align-center justify-center pa-3" Elevation="3">
+            <MudText Typo="Typo.h6">
+                Welcome to Dakotah's Bookkeeping & Taxes.
+            </MudText>
             <MudText Typo="Typo.body1">
-                Welome to Dakotah's Bookkeping and Taxes. We prepare all kinds of income taxes. We also offer bookkeeping services
-                to businesses. Please feel free to contact us with any questions.
+                We area  full service bookkeeping business. Feel free to contact us with any questions:
             </MudText>
+            <div>
+                <MudButton Color="Color.Info" Variant="Variant.Filled" Link="tel:7246387495">
+                    Call Us
+                </MudButton>
+
+                <MudButton Color="Color.Info" Variant="Variant.Filled"
+                           Link="mailto:taxwizard8@gmail.com?subject=Questions%20About%20Taxes&body=Hello%2C%0AI%20have%20questions%20about%20doing%20my%20taxes.">
+                    Email Us
+                </MudButton>
+            </div>
+        </MudPaper>
+    </MudItem>
+
+    <MudItem lg="4" md="4" sm="12" xs="12">
+        <MudPaper Class="d-flex flex-column align-center justify-center pa-3" Elevation="3">
+            <MudText Typo="Typo.h6">
+                We are located at
+            </MudText>
+
             <MudText Typo="Typo.body2">
-                This site is still in developement, so if you can't find what you need here please call us at (724) 638-7495 or email us at taxwizard8@gmail.com.
+                273 Main St. Suite 101
+                <br />
+                Greenville, PA 16125
+            </MudText>
+
+            <MudButton Color="Color.Info" Variant="Variant.Filled"
+                       Link="https://goo.gl/maps/mjef8o1uh67CPpfs9">
+                Get Directions
+            </MudButton>
+        </MudPaper>
+    </MudItem>
+
+    <MudItem lg="6" md="4" sm="12" xs="12">
+        <MudPaper Class="d-flex flex-column align-center justify-center pa-3" Elevation="3">
+            <MudText Typo="Typo.h6">
+                Walk-ins are always welcome!
+            </MudText>
+
+            <MudText Typo="Typo.body1">
+                We have normal hours and tax season hours. Tax season starts on the third Monday in January and ends on April 18th.
+            </MudText>
+            <br />
+            <MudText Typo="Typo.body1">
+                Durring tax season we will have tables set up at Thiel College on Saturdays. We offer discounts for students!
             </MudText>
         </MudPaper>
     </MudItem>
 
-    <MudItem xs="12" sm="6">
-        <MudPaper Class="d-flex align-center justify-center mud-width-full py-8">
-            <img src="/assets/cert-agent.jpg" class="image-sizes" />
-        </MudPaper>
+    <MudItem lg="3" md="4" sm="12" xs="12">
+        <MudSimpleTable Dense="true" Hover="true" Elevation="3">
+            <thead>
+                <tr>
+                    <th colspan="2">Normal Hours</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Sunday</td>
+                    <td>Closed</td>
+                </tr>
+                <tr>
+                    <td>Monday</td>
+                    <td>10AM - 5PM</td>
+                </tr>
+                <tr>
+                    <td>Tuesday</td>
+                    <td>10AM - 5PM</td>
+                </tr>
+                <tr>
+                    <td>Wednesday</td>
+                    <td>10AM - 5PM</td>
+                </tr>
+                <tr>
+                    <td>Thursday</td>
+                    <td>10AM - 5PM</td>
+                </tr>
+                <tr>
+                    <td>Friday</td>
+                    <td>10AM - 3PM</td>
+                </tr>
+                <tr>
+                    <td>Saturday</td>
+                    <td>Closed</td>
+                </tr>
+            </tbody>
+        </MudSimpleTable>
     </MudItem>
 
-    <MudItem xs="12" sm="6">
-        <MudPaper Class="d-flex align-center justify-center mud-width-full py-8">
-            <img src="/assets/e-file.png" class="image-sizes" />
-        </MudPaper>
+    <MudItem lg="3" md="4" sm="12" xs="12">
+        <MudSimpleTable Dense="true" Hover="true" Elevation="3">
+            <thead>
+                <tr>
+                    <th colspan="2">Tax Season Hours</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Sunday</td>
+                    <td>Closed</td>
+                </tr>
+                <tr>
+                    <td>Monday</td>
+                    <td>10AM - 7PM</td>
+                </tr>
+                <tr>
+                    <td>Tuesday</td>
+                    <td>10AM - 7PM</td>
+                </tr>
+                <tr>
+                    <td>Wednesday</td>
+                    <td>10AM - 7PM</td>
+                </tr>
+                <tr>
+                    <td>Thursday</td>
+                    <td>10AM - 7PM</td>
+                </tr>
+                <tr>
+                    <td>Friday</td>
+                    <td>10AM - 7PM</td>
+                </tr>
+                <tr>
+                    <td>Saturday</td>
+                    <td>10AM - 7PM</td>
+                </tr>
+            </tbody>
+        </MudSimpleTable>
     </MudItem>
+
 </MudGrid>

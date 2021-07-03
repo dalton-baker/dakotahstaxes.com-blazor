@@ -5,7 +5,7 @@
     RewriteBase /
 
     # You must add all possible urls in your application here
-    RewriteRule ^scheduling /index.html [L]
+    RewriteRule ^fees /index.html [L]
     RewriteRule ^taxinfo /index.html [L]
     RewriteRule ^taxtools /index.html [L]
     RewriteRule ^taxnews /index.html [L]
