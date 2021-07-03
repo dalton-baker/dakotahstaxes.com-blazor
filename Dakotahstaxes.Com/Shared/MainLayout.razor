@@ -10,30 +10,29 @@
             <div class="title title-lg">Dakotah's Bookkeeping & Taxes</div>
             <div class="title title-sm">Dakotah's Taxes</div>
             <MudSpacer />
-            <MudTooltip Text="@_themeButoonToolTip">
-                <MudIconButton Icon="@Icons.Material.Filled.Brightness4"
-                               OnClick="@((e) => ChangeTheme())"
-                               Color="Color.Inherit"></MudIconButton>
-            </MudTooltip>
         </MudAppBar>
         <MudDrawer @bind-Open="@open" Elevation="1">
-            <MudDrawerHeader>
-                <img src="/assets/logo.jpg" width="196" />
+            <MudDrawerHeader Style="justify-content: center">
+                <img src="/assets/logo.jpg" style="width: 75%" />
             </MudDrawerHeader>
             <MudNavMenu>
                 <MudNavLink Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.Home" Href="">Home</MudNavLink>
                 <MudNavLink Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.AttachMoney" Href="fees">Fees</MudNavLink>
-                <MudNavLink Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.Schedule" Href="scheduling">Scheduling</MudNavLink>
                 <MudNavLink Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.Info" Href="taxinfo">Tax Info</MudNavLink>
                 <MudNavLink Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.Construction" Href="taxtools">Tax Tools</MudNavLink>
                 <MudNavLink Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.Web" Href="taxnews">Tax News</MudNavLink>
             </MudNavMenu>
             <MudSpacer />
 
+            <img src="/assets/cert-agent.jpg" class="image-sizes" />
+            <img src="/assets/e-file.png" class="image-sizes" />
+
+            <MudSpacer />
+
             <div style="padding: 5px">
                 <table id="contact-us-table">
                     <tr>
-                        <th colspan="2">CONTACT US</th>
+                        <th colspan="2">CONTACT INFO</th>
                     </tr>
                     <tr>
                         <td>PHONE:</td>

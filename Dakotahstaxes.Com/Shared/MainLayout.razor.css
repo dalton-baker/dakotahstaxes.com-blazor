@@ -8,6 +8,11 @@
     flex: 1;
 }
 
+.image-sizes {
+    padding: 12px;
+}
+
+
 #contact-us-table {
     height: fit-content;
 }
