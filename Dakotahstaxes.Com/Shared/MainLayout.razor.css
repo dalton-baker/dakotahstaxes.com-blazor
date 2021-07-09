@@ -12,7 +12,9 @@
 }
 
 .image-sizes {
-    padding: 12px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 20px;
 }
 
 #contact-us-table {
