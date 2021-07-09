@@ -27,6 +27,7 @@ namespace Dakotahstaxes.Com.Shared
                 Primary = "#00AA00",
 
                 Info = "#00AA00",
+                //Surface = "#F1F1E8"
             }
 
         };

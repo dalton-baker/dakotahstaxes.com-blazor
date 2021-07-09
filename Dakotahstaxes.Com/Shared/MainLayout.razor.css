@@ -1,7 +1,10 @@
 .page {
+    background-image: url('/assets/background.jpeg');
+    background-size: cover;
     position: relative;
     display: flex;
     flex-direction: column;
+    min-height: 100vh;
 }
 
 .main {
@@ -11,7 +14,6 @@
 .image-sizes {
     padding: 12px;
 }
-
 
 #contact-us-table {
     height: fit-content;
