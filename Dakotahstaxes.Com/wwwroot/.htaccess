@@ -2,6 +2,10 @@
 <IfModule mod_rewrite.c>
     RewriteEngine On
     
+    RewriteCond %{HTTP_HOST} ^(www.)?dakotahstaxes.com$
+    RewriteCond %{HTTPS} !=on
+    RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L]
+
     RewriteBase /
 
     # You must add all possible urls in your application here
