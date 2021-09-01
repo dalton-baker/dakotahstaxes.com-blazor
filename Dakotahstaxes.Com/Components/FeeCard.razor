@@ -1,23 +1,17 @@
-﻿<MudPaper Elevation="3" Class="fee-card">
-    <div class="fee-card">
-        <MudText Typo="Typo.h6">@Title</MudText>
+﻿<MudPaper Elevation="3" Style="height: 100%" Class="d-flex flex-column justify-start px-3 py-1">
+    <MudText Typo="Typo.h6">@Title</MudText>
 
-        <MudText Typo="Typo.subtitle1">@Body</MudText>
+    <MudText Typo="Typo.subtitle1">@Body</MudText>
 
-        @if (Caveat is not null)
-        {
-            <MudText Typo="Typo.body2">*@Caveat</MudText>
-        }
+    @if (Caveat is not null)
+    {
+        <div style="height:5px" />
+        <MudText Typo="Typo.body2">*@Caveat</MudText>
+    }
 
-        <br />
-
-        @if (Price is not null)
-        {
-            <MudText Typo="Typo.button" Color="Color.Info">@Price</MudText>
-        }
-        else
-        {
-            <MudButton Color="Color.Info" Link="tel:7246387495">Call Us</MudButton>
-        }
-    </div>
+    @if (Price is not null)
+    {
+        <div style="height:10px" />
+        <MudText Typo="Typo.button" Color="Color.Info" Class="mt-2 mt-auto">@Price</MudText>
+    }
 </MudPaper>
