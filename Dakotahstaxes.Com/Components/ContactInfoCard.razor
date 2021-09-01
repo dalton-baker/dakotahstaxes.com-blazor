@@ -1,0 +1,13 @@
+﻿<MudPaper Elevation="3" Style="height: 100%" Class="d-flex flex-column justify-start px-3 pt-1 pb-3">
+    <MudText Typo="Typo.h6">@Title</MudText>
+
+    <div style="height:5px"/>
+
+    @Body
+
+    @if (Action is not null)
+    {
+        <div style="height:10px" class="mt-auto" />
+        @Action
+    }
+</MudPaper>

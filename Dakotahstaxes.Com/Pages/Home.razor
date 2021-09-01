@@ -1,42 +1,24 @@
 ﻿@page "/"
 
-<MudGrid>
-    <MudItem lg="8" md="8" sm="12" xs="12">
-        <MudPaper Class="d-flex flex-column align-center justify-center pa-3" Elevation="3">
+<MudGrid Justify="Justify.SpaceAround">
+    <MudItem lg="6" md="12" sm="12" xs="12">
+        <MudPaper Class="d-flex flex-column align-center justify-start pa-3" Elevation="3">
             <MudText Typo="Typo.h6">
-                Welcome to Dakotah's Bookkeeping & Taxes.
+                Welcome!
             </MudText>
+
+            <div style="height:5px" />
+
             <MudText Typo="Typo.body1">
-                We area  full service bookkeeping business. Feel free to contact us with any questions:
-            </MudText>
-            <div>
-                <MudButton Color="Color.Info" Variant="Variant.Filled" Link="tel:7246387495">
-                    Call Us
-                </MudButton>
-
-                <MudButton Color="Color.Info" Variant="Variant.Filled"
-                           Link="mailto:taxwizard8@gmail.com?subject=Questions%20About%20Taxes&body=Hello%2C%0AI%20have%20questions%20about%20doing%20my%20taxes.">
-                    Email Us
-                </MudButton>
-            </div>
-        </MudPaper>
-    </MudItem>
-
-    <MudItem lg="4" md="4" sm="12" xs="12">
-        <MudPaper Class="d-flex flex-column align-center justify-center pa-3" Elevation="3">
-            <MudText Typo="Typo.h6">
-                We are located at
+                We area  full service bookkeeping and tax preparing business located in Greenville, PA. 
+                We offer local and remote service to anyone that needs it. Feel free to contact us with any questions.
             </MudText>
 
-            <MudText Typo="Typo.body2">
-                273 Main St. Suite 101
-                <br />
-                Greenville, PA 16125
-            </MudText>
+            <div style="height:10px" />
 
-            <MudButton Color="Color.Info" Variant="Variant.Filled"
-                       Link="https://goo.gl/maps/mjef8o1uh67CPpfs9">
-                Get Directions
+            <MudButton Color="Color.Info" Variant="Variant.Filled" Style="width:max-content" Class="mr-auto"
+                       Link="/contactus">
+                Contact Us
             </MudButton>
         </MudPaper>
     </MudItem>
@@ -50,9 +32,9 @@
             <MudText Typo="Typo.body1">
                 We have normal hours and tax season hours. Tax season starts on the third Monday in January and ends on April 18th.
             </MudText>
-            <br />
+
             <MudText Typo="Typo.body1">
-                During tax season we will have tables set up at Thiel College on Saturdays. We offer discounts for students!
+                During tax season we will have tables set up at Thiel College on Saturdays. Also, we offer discounts for students!
             </MudText>
         </MudPaper>
     </MudItem>

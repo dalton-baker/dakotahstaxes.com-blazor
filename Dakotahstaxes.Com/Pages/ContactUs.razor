@@ -1,0 +1,69 @@
+﻿@page "/contactus"
+
+<style>
+    .mud-card-height {
+        height: 100%;
+    }
+</style>
+
+<MudGrid>
+    <MudItem lg="3" md="4" sm="6" xs="12">
+        <ContactInfoCard Title="Phone Number">
+            <Body>
+                <MudText Typo="Typo.body1">
+                    (724) 638-7495
+                </MudText>
+            </Body>
+            <Action>
+                <MudButton Color="Color.Info" Variant="Variant.Filled" Style="width:max-content" Link="tel:7246387495">
+                    Call Us
+                </MudButton>
+            </Action>
+        </ContactInfoCard>
+    </MudItem>
+
+    <MudItem lg="3" md="4" sm="6" xs="12">
+        <ContactInfoCard Title="Email">
+            <Body>
+                <MudText Typo="Typo.body1">
+                    taxwizard8@gmail.com
+                </MudText>
+            </Body>
+            <Action>
+                <MudButton Color="Color.Info" Variant="Variant.Filled" Style="width:max-content"
+                           Link="mailto:taxwizard8@gmail.com?subject=Questions%20About%20Taxes&body=Hello%2C%0AI%20have%20questions%20about%20doing%20my%20taxes.">
+                    Email Us
+                </MudButton>
+            </Action>
+        </ContactInfoCard>
+    </MudItem>
+
+    <MudItem lg="3" md="4" sm="6" xs="12">
+        <ContactInfoCard Title="Address">
+            <Body>
+                <MudText Typo="Typo.body1">
+                    Dakotah's Bookkeeping & Taxes <br />
+                    273 Main St. Suite 101 <br />
+                    Greenville, PA 16125
+                </MudText>
+            </Body>
+            <Action>
+                <MudButton Color="Color.Info" Variant="Variant.Filled" Style="width:max-content"
+                           Link="https://goo.gl/maps/mjef8o1uh67CPpfs9">
+                    Get Directions
+                </MudButton>
+            </Action>
+        </ContactInfoCard>
+    </MudItem>
+
+    <MudItem lg="3" md="4" sm="6" xs="12">
+        <ContactInfoCard Title="Fax Number">
+            <Body>
+                <MudText Typo="Typo.body1">
+                    (724) 835-8524
+                </MudText>
+            </Body>
+        </ContactInfoCard>
+    </MudItem>
+
+</MudGrid>
