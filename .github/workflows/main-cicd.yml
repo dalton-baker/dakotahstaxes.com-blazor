@@ -2,6 +2,23 @@ name: master CI/CD
 
 on:
   workflow_dispatch:
+    inputs:
+      deploy_server:
+        description: 'The server to deploy to'
+        required: false
+        default: ${{ secrets.DEPLOY_SERVER }}
+      deploy_server_username:
+        description: 'The username to use when deploying'
+        required: false
+        default: ${{ secrets.DEPLOY_USERNAME }}
+      deploy_server_password:
+        description: 'The password to use when deploying'
+        required: false
+        default: ${{ secrets.DEPLOY_PASSWORD }}
+      deploy_server_port:
+        description: 'The port to use when deploying'
+        required: false
+        default: '21'
   push:
     branches: [ master ]
 
@@ -36,7 +53,7 @@ jobs:
       uses: SamKirkland/FTP-Deploy-Action@v4.3.5
       with:
         local-dir: ${{ github.WORKSPACE }}/${{ env.MAIN_PROJECT }}/bin/Release/net5.0/publish/wwwroot/
-        server: ${{ secrets.DEPLOY_SERVER }}
-        username: ${{ secrets.DEPLOY_USERNAME }}
-        password: ${{ secrets.DEPLOY_PASSWORD }}
-        port: 21
+        server: ${{ github.event.inputs.deploy_server }}
+        username: ${{ github.event.inputs.deploy_server_username }}
+        password: ${{ github.event.inputs.deploy_server_password }}
+        port: ${{ github.event.inputs.deploy_server_port }}
